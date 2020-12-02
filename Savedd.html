@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Daily Quotes Application</title>
+        <link rel = "stylesheet" href="styless.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .alive
+            {
+                width: 85px;
+                border: 0.5px solid green;
+                padding: 5px;
+                margin: 20px;
+                background-color: green;
+            }
+            .btn {
+                background-color: DodgerBlue;
+                border: 50px;
+                color: white;
+                padding: 7px 10px;
+                border-radius: 7.5%;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+                /* Darker background on mouse-over */
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            const delQuote=(quote)=>{
+        $.ajax({
+          type: "POST",
+          url: './deletesaved.php',
+          dataType: 'json',
+          data: {quote:quote}
+        })
+      }
+        </script>
+    </head>
+    <body>
+        <center>
+            <header>
+                <h1><b><font color="grey">Daily Quotes Application</font></b><br><br></h1>
+                <h3>
+                <a href="first.html"><font color="#A8E6CE">Home</a> ||</font>
+                <a href="Anime.html"><font color="#A8E6CE">Anime Quotes</a> ||</font>
+                <a href="Movies.html"><font color="#A8E6CE">Movie Quotes</a> ||</font>
+                <a href="TVSeries.html"><font color="#A8E6CE">TV Series Quotes</a> ||</font>
+                <a href="Serials.html"><font color="#A8E6CE">Serials</font></a>
+                <div class="alive"><a href="Savedd.html"><font color="#A8E6CE">Saved Quotes</font></a></div>
+                </h3>
+            </header>
+            <h2><marquee><font color = "#FFD3B5"> Saved Quotes!</font></marquee></h2>
+            <table class="addquote">
+                <table style="width:67.85%; border:7.5px solid black; font-family: var(--roboto); color: white; margin-left: auto; margin-right: auto;">
+                    <tr style="border:5px solid black;">
+                    <th>Origin </th>
+                    <th>Quote</th>
+                    <th>Category</th>
+                    <th>Rating</th>
+                </tr>
+                <?php
+                 include '/opt/lampp/htdocs/QuoteNation/saved.php';
+                 ?>
+            </table>
+            <footer>
+                <font color="grey"><h2>www.quotenation.com</h2></font>
+            </footer>
+        </center>
+    </body>
+</html>

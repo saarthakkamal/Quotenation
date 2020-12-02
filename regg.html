@@ -1,0 +1,36 @@
+<HTML>
+    <link rel = "stylesheet" href="loginStyle.css">
+    <style>
+        body {
+        background-color: black;
+        background-image: url("bg.jpg");
+        background-size:cover;
+    }
+    </style>
+<body>
+    <center><br><br><br><br>
+    <form action="action_page.php" method="POST">
+    <label for="quote"><font color="white">Quote</font></label><br><br>
+    <input type="text" id="quote" name="quote" placeholder="Enter a quote..."><br><br><br>
+    <label for="used"><font color="white">Which Anime/Manga/TV</font></label><br><br>
+    <input type="username" id="origin" name="origin" placeholder="Where was it used?"><br><br><br>
+    <input type="radio" id="Movie" name="category" value="Movie">
+    <label for="Movie"><font color="white">Movie</font></label>
+    <input type="radio" id="TV Series" name="category" value="TV Series">
+    <label for="TV Series"><font color="white">TV Series</font></label>
+    <input type="radio" id="Anime" name="category" value="Anime">
+    <label for="Anime"><font color="white">Anime</font></label><br><br>
+    <label for="rating"><font color="white">Rate the quote: </font></label>
+    <select name="rating" id="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+    </center>
+</body>
+</HTML>

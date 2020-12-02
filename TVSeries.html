@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Daily Quotes Application</title>
+        <link rel = "stylesheet" href="styless.css">
+        <style>
+            .alive
+            {
+                width: 150px;
+                border: 0.5px solid green;
+                padding: 5px;
+                margin: 20px;
+                background-color: green;
+            }
+            .btn {
+                background-color: DodgerBlue;
+                border: 50px;
+                color: white;
+                padding: 7px 10px;
+                border-radius: 7.5%;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+                /* Darker background on mouse-over */
+            .btn:hover {
+                background-color: RoyalBlue;
+            }
+        </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script>
+            const saveQuote=(origin,quote,category,rating)=>{
+        $.ajax({
+          type: "POST",
+          url: './savequote.php',
+          dataType: 'json',
+          data: {origin:origin,quote:quote,category:category,rating:rating}
+        })
+      }
+        </script>
+    </head>
+    <body>
+        <center>
+            <header>
+                <h1><b><font color="grey">Daily Quotes Application</font></b><br><br></h1>
+                <h3>
+                    <a href="first.html"><font color="#A8E6CE">Home</a> ||</font>
+                    <a href="Savedd.html"><font color="#A8E6CE">Saved Quotes</a> ||</font>
+                    <a href="Anime.html"><font color="#A8E6CE">Anime Quotes</a> ||</font>
+                    <a href="Movies.html"><font color="#A8E6CE">Movie Quotes</a> ||</font>
+                    <a href="Serials.html"><font color="#A8E6CE">Serials</font></a>
+                    <div class="alive"><a href="TVSeries.html"><font color="#A8E6CE">TV Series Quotes</font></a></div>
+                </h3>
+            </header>
+            <h2><marquee><font color = "#FFAAA6"> TV Series Quotes!</font></marquee></h2>
+            <iframe width="932" height="524" src="https://www.youtube.com/embed/FS218arbwV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <table class="addquote">
+                <table style="width:67.85%; border:7.5px solid black; font-family: var(--roboto); color: white; margin-left: auto; margin-right: auto;">
+                    <tr style="border:5px solid black;">
+                    <th>Origin </th>
+                    <th>Quote</th>
+                    <th>Rating</th>
+                </tr>
+                <?php
+                 include '/opt/lampp/htdocs/QuoteNation/tvquotes.php';
+                 ?>
+                </table>
+            <footer>
+                <font color="grey"><h2>www.quotenation.com</h2></font>
+            </footer>
+        </center>
+    </body>
+</html>

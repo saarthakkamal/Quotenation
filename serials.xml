@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="./serials.xsl"?>
+<serials>
+    <serial>
+        <id>I wish there was a way to know you're in the good old days before you've actually left them.</id>
+        <name>The Office</name>
+        <rating>4</rating>
+        <genre>TV Series</genre>
+    </serial>
+    <serial>
+        <id>Strong is fighting. It’s hard and it’s painful and it’s every day. It’s what we have to do, and we can do it together, but if you’re too much of a coward for that, then burn.</id>
+        <name>Buffy The Vampire Slayer</name>
+        <rating>3</rating>
+        <genre>TV Series</genre>
+    </serial>
+    <serial>
+        <id>You can spend the rest of your life being afraid of people rejecting you. You have to start by not rejecting yourself. You don’t deserve it.</id>
+        <name>My Mad Fat Diary</name>
+        <rating>5</rating>
+        <genre>TV Series</genre>
+    </serial>
+    <serial>
+        <id>The world isn't perfect. But it's there for us, doing the best it can....that's what makes it so damn beautiful.</id>
+        <name>Full Metal Alchemist</name>
+        <rating>5</rating>
+        <genre>Anime</genre>
+    </serial>
+    <serial>
+        <id>To know sorrow is not terrifying. What is terrifying is to know you can't go back to happiness you could have.</id>
+        <name>Bleach</name>
+        <rating>4</rating>
+        <genre>Anime</genre>
+    </serial>
+    <serial>
+        <id>There's nothing like deep breaths after laughing that hard. Nothing in the world like a sore stomach for the right reasons.</id>
+        <name>The Perks of Being a Wallflower</name>
+        <rating>5</rating>
+        <genre>Movie</genre>
+    </serial>
+</serials>

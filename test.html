@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form{
+        margin: auto;
+        font-style: italic;
+        background-color: #434343;
+    }
+</style>
+<body>
+    <div class="form">
+        Username: <input type="text" name="usr" id="usr"><br><br>
+        Password: <input type="Password" name="pass" id="pass"><br><br>
+        <button name="submit" id="submit">Submit</button>
+    </div>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-database.js"></script>
+<script>
+var firebaseConfig = {
+    apiKey: "AIzaSyAPrWHYEZ57p58L6-wZA2T4QdfYoJgzm_U",
+    authDomain: "quotenation-9683f.firebaseapp.com",
+    databaseURL: "https://quotenation-9683f.firebaseio.com",
+    projectId: "quotenation-9683f",
+    storageBucket: "quotenation-9683f.appspot.com",
+    messagingSenderId: "999572409509",
+    appId: "1:999572409509:web:d567ffaf47090b33f5d14c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  let button = document.getElementById("submit");
+
+button.addEventListener("click", function () {
+
+	let name = document.getElementById("usr").value;
+	let pass = document.getElementById("pass").value;
+
+	if(name == "" || pass == "")
+	{
+		alert("Please Enter the fields");
+	}
+	else
+	{
+		var data = {
+			Username: name,
+			Password: pass
+		}
+
+		var database = firebase.database();
+
+		var ref = database.ref("users");
+
+		ref.push(data);
+	}
+})
+</script>
+</body>
+</html>
